@@ -32,10 +32,10 @@ These verbs might also be nested inside `<Transfer>`:
 
 ### Events Recevied
 
-| Event                                                                             | Can reply with more BXML |
-|:----------------------------------------------------------------------------------|:-------------------------|
-| [Hangup](http://dev.bandwidth.com/ap-docs/bxml/callBacks/hangup.html)             | Yes                      |
-| [transferComplete](http://dev.bandwidth.com/ap-docs/bxml/callBacks/transfer.html) | Yes                      |
+| Event                                  | Can reply with more BXML |
+|:---------------------------------------|:-------------------------|
+| [Hangup](events/hangup.md)             | Yes                      |
+| [transferComplete](events/transfer.md) | Yes                      |
 
 
 #### Example: Simple Transfer

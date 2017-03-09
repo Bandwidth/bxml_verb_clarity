@@ -25,9 +25,9 @@ Transcription will not work with mp3 file format.
 
 ### Events Recevied
 
-| Event                                                                    | Can reply with more BXML |
-|:-------------------------------------------------------------------------|:-------------------------|
-| [Record](http://dev.bandwidth.com/ap-docs/bxml/callBacks/recording.html) | Yes                      |
+| Event                         | Can reply with more BXML |
+|:------------------------------|:-------------------------|
+| [Record](events/recording.md) | Yes                      |
 
 
 #### Example: Recording Verb

@@ -26,10 +26,10 @@ These verbs might also be nested inside Call:
 
 ### Events Recevied
 
-| Event                                                                 | Can reply with more BXML |
-|:----------------------------------------------------------------------|:-------------------------|
-| [Answer](http://dev.bandwidth.com/ap-docs/bxml/callBacks/answer.html) | Yes                      |
-| [Hangup](http://dev.bandwidth.com/ap-docs/bxml/callBacks/hangup.html) | Yes                      |
+| Event                      | Can reply with more BXML |
+|:---------------------------|:-------------------------|
+| [Answer](events/answer.md) | Yes                      |
+| [Hangup](events/hangup.md) | Yes                      |
 
 
 #### Example: Simple Call

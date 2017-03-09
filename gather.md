@@ -26,9 +26,9 @@ These verbs might also be nested inside `<Gather>`:
 
 ### Events Recevied
 
-| Event                                                             | Can reply with more BXML |
-|:------------------------------------------------------------------|:-------------------------|
-| [Gather](http://dev.bandwidth.com/ap-docs/bxml/verbs/gather.html) | Yes                      |
+| Event                      | Can reply with more BXML |
+|:---------------------------|:-------------------------|
+| [Gather](events/gather.md) | Yes                      |
 
 
 

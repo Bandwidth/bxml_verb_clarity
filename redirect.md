@@ -17,9 +17,9 @@ Any verb after `<Redirect>` will not be executed.
 
 ### Events Recevied
 
-| Event                                                                     | Can reply with more BXML |
-|:--------------------------------------------------------------------------|:-------------------------|
-| [Redirect](http://dev.bandwidth.com/ap-docs/bxml/callBacks/redirect.html) | Yes                      |
+| Event                          | Can reply with more BXML |
+|:-------------------------------|:-------------------------|
+| [Redirect](events/redirect.md) | Yes                      |
 
 
 #### Example: Redirect Verb

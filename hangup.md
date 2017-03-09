@@ -8,9 +8,9 @@ This verb does not support attributes.
 
 ### Events Recevied
 
-| Event                                                                 | Can reply with more BXML |
-|:----------------------------------------------------------------------|:-------------------------|
-| [Hangup](http://dev.bandwidth.com/ap-docs/bxml/callBacks/hangup.html) | Yes                      |
+| Event                      | Can reply with more BXML |
+|:---------------------------|:-------------------------|
+| [Hangup](events/hangup.md) | Yes                      |
 
 #### Example: Hangup Verb
 This shows how to use Bandwidth XML to hang up an existing call.
