@@ -2,18 +2,18 @@
 
 ## Verbs
 
-| Verb                                  | Description                                                                                                                                     |
-|:--------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------|
-| [`<Call>`](call.md)                   | The Call verb is used to create call to another number.                                                                                         |
-| [`<Gather>`](gather.md)               | The Gather verb is used to collect digits for some period of time.                                                                              |
-| [`<Hangup>`](hangup.md)               | The Hangup verb is used to hangup current call.                                                                                                 |
-| [`<Pause>`](pause.md)                 | Pause is a verb to specify the length of seconds to wait before executing the next verb. <br> ** This feature is coming soon**                  |
-| [`<PlayAudio>`](playAudio.md)         | The PlayAudio verb is used to play an audio file in the call.                                                                                   |
-| [`<Record>`](record.md)               | The Record verb allows call recording. At the end of the call, a call recording event containing the media with recorded audio URL is generated |
-| [`<Redirect>`](redirect.md)           | The Redirect verb is used to redirect the current XML execution to another URL.                                                                 |
-| [`<Reject>`](reject.md)               | The Reject verb is used to reject incoming calls.<br>  **This feature is coming soon. **                                                        |
-| [`<SpeakSentence>`](speakSentence.md) | The SpeakSentence verb is used to convert any text into speak for the caller.                                                                   |
-| [`<Transfer>`](transfer.md)           | The Transfer verb is used to transfer the call to another number.                                                                               |
+| Verb                                  | Description                                                                                                                                     | Comments |
+|:--------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------|:--------:|
+| [`<Call>`](call.md)                   | The Call verb is used to create call to another number.                                                                                         | To be implemented|
+| [`<Gather>`](gather.md)               | The Gather verb is used to collect digits for some period of time.                                                                              ||
+| [`<Hangup>`](hangup.md)               | The Hangup verb is used to hangup current call.                                                                                                 || 
+| [`<Pause>`](pause.md)                 | Pause is a verb to specify the length of seconds to wait before executing the next verb. <br> ** This feature is coming soon**                  | To be implemented|
+| [`<PlayAudio>`](playAudio.md)         | The PlayAudio verb is used to play an audio file in the call.                                                                                   ||
+| [`<Record>`](record.md)               | The Record verb allows call recording. At the end of the call, a call recording event containing the media with recorded audio URL is generated ||
+| [`<Redirect>`](redirect.md)           | The Redirect verb is used to redirect the current XML execution to another URL.                                                                 ||
+| [`<Reject>`](reject.md)               | The Reject verb is used to reject incoming calls.<br>  **This feature is coming soon. **                                                        |To be implemented|
+| [`<SpeakSentence>`](speakSentence.md) | The SpeakSentence verb is used to convert any text into speak for the caller.                                                                   ||
+| [`<Transfer>`](transfer.md)           | The Transfer verb is used to transfer the call to another number.                                                                               ||
 
 
 ## Events/Callbacks
@@ -40,6 +40,7 @@ This requires that the incoming call stays alive after the transfered call compl
 
 1. Incoming call, reply with [`<Gather>`](gather.md) BXML to direct to correct department
 2. Receive the [Gather](events/gather.md) callback
+    1. The reply may have a BXML for another <Gather> to be able to build the IVR system. 
 3. Reply with [`<Transfer>`](transfer.md) BXML based on customer response.
 4. Customer and rep talk
 5. Rep hangs up. Receive the [transferComplete](events/transfer.md) event
