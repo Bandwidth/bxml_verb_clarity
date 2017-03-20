@@ -14,7 +14,7 @@
 
 
 
-#### HTTP request sent to the callback url
+#### HTTP request sent to the callback url specified in the `/application` 
 
 ```html
 /{requestUrl}?
