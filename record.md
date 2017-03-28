@@ -25,9 +25,10 @@ Transcription will not work with mp3 file format.
 
 ### Events Recevied
 
-| Event                         | Can reply with more BXML |
-|:------------------------------|:-------------------------|
-| [Record](events/recording.md) | Yes                      |
+| Event                              | Can reply with more BXML |
+|:-----------------------------------|:-------------------------|
+| [Record](events/recording.md)      | Yes                      |
+| [Transcribe](events/transcribe.md) | No                       |
 
 
 #### Example: Recording Verb
@@ -46,5 +47,3 @@ This shows how to use Bandwidth XML record a phone call.
 
 </Response>
 ```
-
-
