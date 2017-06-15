@@ -1,5 +1,8 @@
 # BXML Verb Clarity
+This is the set of documentation/requirements for Slingshot. 
 
+Outbound call:
+1. 
 ## Verbs
 
 | Verb                                  | Description                                                                                                                                     | Comments |
