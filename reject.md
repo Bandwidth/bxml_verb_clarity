@@ -12,7 +12,7 @@ This feature is coming soon.
 ### Attributes
 | ATTRIBUTE | DESCRIPTION                                                                                                     |
 |:----------|:----------------------------------------------------------------------------------------------------------------|
-| reason    | (optional) Describe the reason for rejecting the call (busy or rejected to play different tones to the caller). |
+| reason    | (optional) Describe the reason for rejecting the call. Allowed values: "BUSY" or "REJECTED". Default: BUSY |
 
 
 ### Events Recevied
