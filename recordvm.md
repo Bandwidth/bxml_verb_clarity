@@ -1,7 +1,7 @@
 
 ## XML: `<RecordVM>`
-The RecordVM verb is used to record a brief message from the user like a voicemail message. At the end of the call, a call recording event containing the media with recorded audio URL is generated.
-
+The RecordVM verb is used to record a brief message from the user like a voicemail message. After recording, a call recording event containing the media with recorded audio URL is generated. BXML is expected in the response to the event to continue processing the call. If the response did not have a valid BXML, call will be hungup. 
+Note that the recording will be in Mono. 
 
 ### Attributes
 | ATTRIBUTE             | DESCRIPTION                                                                                                    |
