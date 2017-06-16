@@ -7,10 +7,7 @@ The Hangup verb is used to hangup current call.
 This verb does not support attributes.
 
 ### Events Recevied
-
-| Event                      | Can reply with more BXML |
-|:---------------------------|:-------------------------|
-| [Hangup](events/hangup.md) | Yes                      |
+*TBD*
 
 #### Example: Hangup Verb
 This shows how to use Bandwidth XML to hang up an existing call.
