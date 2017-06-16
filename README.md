@@ -1,13 +1,25 @@
 # BXML Verb Clarity
 This is the set of documentation/requirements for Slingshot. 
 
-Outbound call:
-1. 
+## Call Processing
+### Outbound Call
+1. Customer uses the API to create an outbound call. Specifies the action URL. 
+1. Slingshot places the call. When the call is answered, Slingshot reuests BXML from action URL
+1. Slingshot executes verbs in the BXML. 
+1. Slingshot requests new BXML at the verb::actionUrl if present; 
+1. Slingshot continues with the next verb if no actionUrl is specified in the previous verb. 
+
+### Inbound Call
+1. Slingshot gets and inbound call
+1. Slingshot looks up the app for the given appId. Get the URL
+1. Slingshot requests BXML for incomingCall from the app::actionUrl. 
+1. Slingshot executes the recieved BXML. 
+
 ## Verbs
 
 | Verb                                  | Description                                                                                                                                     | Comments |
 |:--------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------|:--------:|
-| [`<Call>`](call.md)                   | The Call verb is used to create call to another number.                                                                                         | To be implemented|
+| [`<Call>`](call.md)                   | The Call verb is used to create call to another number.                                                                                         | Not available in Slingshot|
 | [`<Gather>`](gather.md)               | The Gather verb is used to collect digits for some period of time.                                                                              ||
 | [`<Hangup>`](hangup.md)               | The Hangup verb is used to hangup current call.                                                                                                 || 
 | [`<Pause>`](pause.md)                 | Pause is a verb to specify the length of seconds to wait before executing the next verb. <br> ** This feature is coming soon**                  | To be implemented|
@@ -17,6 +29,7 @@ Outbound call:
 | [`<Reject>`](reject.md)               | The Reject verb is used to reject incoming calls.<br>  **This feature is coming soon. **                                                        |To be implemented|
 | [`<SpeakSentence>`](speakSentence.md) | The SpeakSentence verb is used to convert any text into speak for the caller.                                                                   ||
 | [`<Transfer>`](transfer.md)           | The Transfer verb is used to transfer the call to another number.                                                                               ||
+| [`<Conference>`](transfer.md)           | Create Conferences                                                                               |TBD|
 
 
 ## Events/Callbacks
