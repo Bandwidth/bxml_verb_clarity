@@ -1,33 +1,35 @@
 
 ## XML: `<Record>`
-The Record verb allows call recording. At the end of the call, a call recording event containing the media with recorded audio URL is generated.
+The Record verb allows call recording. At the end of the call, a call recording event containing the media with recorded audio URL is generated. Note that this event will be sent after the call is completed. 
 
 
 ### Attributes
 | ATTRIBUTE             | DESCRIPTION                                                                                                    |
 |:----------------------|:---------------------------------------------------------------------------------------------------------------|
-| requestUrl            | (optional) Relative or absolute URL to send event and request new BXML.                                        |
-| requestUrlTimeout     | (optional) The time in milliseconds to wait for requestUrl response.                                           |
-| fileFormat            | (optional) The format that the recording will be saved - mp3 or wav.                                           |
-| terminatingDigits     | (optional) One or more digits that will finish the recording.                                                  |
-| maxDuration           | (optional) The time in second for max recording duration. Default is 300 seconds, up to 3600 seconds (1 hour). |
-| transcribe            | (optional) A boolean value to indicate that recording must be transcribed. Default is ‘false’.                 |
-| transcribeCallbackUrl | Relative or absolute URL to send transcribed event.                                                            |
+| requestUrl            | (optional) Absolute URL to send the recording event                                                            |
+| requestUrlTimeout     | (optional) The time in milliseconds to wait for requestUrl response. Default:30000; Range: 100-120000                                          |
+| requestUrlMethod     | (optional) HTTP method to be used. Could be GET or POST. Default: POST                                           |
+| fileFormat            | (optional) The format that the recording will be saved - mp3 or wav. Default: wav                                          |
+| transcribe            | (optional) A boolean value to indicate that recording must be transcribed. Default is ‘false’.  *Note: Only wav files supported for transcription.*   |       
+| transcribeUrl | Absolute URL to send transcribed event. Required if transcribe=true                                                    |
+| transcribeUrlMethod     | (optional) HTTP method to be used. Could be GET or POST. Default: POST                                       |
+|numChannels            | (optional) Number of channels to record the call. Allowed values:1,2. Default 1. When numChannels = 2, the caller and callee voices are recorded in separate channels in the same file. |
 
 ##### Tip:
-Any verb after recording will not be executed because the `requestUrl` <code class="get">GET</code> is performed after recording completes. The new BXML is expected (Less sense for Bandwidth Application Platform).
 
 <aside class="alert general small">
 <p>
 Transcription will not work with mp3 file format.
 </p>
+<p>
+Any BXML returned to the recording or transcribe events will be ignored. 
 </aside>
 
 ### Events Recevied
 
 | Event                              | Can reply with more BXML |
 |:-----------------------------------|:-------------------------|
-| [Record](events/recording.md)      | Yes                      |
+| [Record](events/recording.md)      | No                      |
 | [Transcribe](events/transcribe.md) | No                       |
 
 
@@ -38,12 +40,8 @@ This shows how to use Bandwidth XML record a phone call.
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Response>
-
-<SpeakSentence voice="paul" gender="male" locale="en_US">Recording your call, type 1 2 3 4 * to stop recording</SpeakSentence>
-
+<SpeakSentence voice="paul" gender="male" locale="en_US">Recording your call</SpeakSentence>
+<Record requestUrl="http://my.server/myrecording" transcribe="true" transcribeCallbackUrl="https://transcribe.url/result"/ >
 <PlayAudio>https://audio.url/audio.mp3</PlayAudio>
-
-<Record requestUrl="/stepTransfer" terminatingDigits="1234*" maxDuration="60" transcribe="true" transcribeCallbackUrl="https://transcribe.url/result"/ >
-
 </Response>
 ```
