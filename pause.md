@@ -6,7 +6,7 @@ Pause is a verb to specify the length of seconds to wait before executing the ne
 
 | Attribute | Description                                                         |
 |:----------|:--------------------------------------------------------------------|
-| duration  | (required) Seconds to wait before continuing the execution of BXML. Default: 0 seconds. Range: 0-30 seconds |
+| duration  | (required) Seconds to wait before continuing the execution of BXML. Range: 0-30 seconds; |
 
 ### Events Recevied
 
