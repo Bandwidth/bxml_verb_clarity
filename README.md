@@ -19,7 +19,6 @@ This is the set of documentation/requirements for Slingshot.
 
 | Verb                                  | Description                                                                                                                                     | Comments |
 |:--------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------|:--------:|
-| [`<Call>`](call.md)                   | The Call verb is used to create call to another number.                                                                                         | Not available in Slingshot|
 | [`<Conference>`](transfer.md)         | Create Conferences                                                                               |TBD|
 | [`<Gather>`](gather.md)               | The Gather verb is used to collect digits for some period of time.                                                                              ||
 | [`<Hangup>`](hangup.md)               | The Hangup verb is used to hangup current call.                                                                                                 || 
