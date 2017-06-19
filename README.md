@@ -34,16 +34,17 @@ This is the set of documentation/requirements for Slingshot.
 
 ## Events/Callbacks
 
-| Event                                         | Description                                                                                                                                                                                    |
-|:----------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Answer Event](events/answer.md)              | Bandwidth API sends this message to the application when the call is answered.                                                                                                                 |
-| [Gather event](events/gather.md)              | Bandwidth API generates a gather event when the gather command completes in a call.                                                                                                            |
-| [Hangup Event](events/hangup.md)              | Bandwidth API sends this message to the application when the call ends.                                                                                                                        |
-| [Incoming Call Event](events/incomingCall.md) | Bandwidth API sends this message to the application when an incoming call arrives. For incoming call the callback set is the one related to the Application associated with the called number. |
-| [Recording event](events/recording.md)        | Bandwidth API sends this event to the application when an the recording media file is saved or an error occurs while saving it.                                                                |
-| [Redirect event](events/redirect.md)          | Bandwidth API sends this event to the application when a `<Redirect>` is requested                                                                                                             |
-| [Incoming SMS event](events/incomingSMS.md)   | Bandwidth API sends this event to the application when an SMS is sent to the Bandwidth Number assigned to an application                                                                       |
-| [Transfer Complete Event](events/transfer.md) | Bandwidth API sends this event to the application when the `<Transfer>`is complete                                                                                                             |
+| Event                                         | Description                                                                                                                                                                                    | Comments|
+|:----------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--|
+| [Answer Event](events/answer.md)              | Bandwidth API sends this message to the application when the call is answered.                                                                                                                 ||
+| [Gather event](events/gather.md)              | Bandwidth API generates a gather event when the gather command completes in a call.                                                                                                            ||
+| [Hangup Event](events/hangup.md)              | Bandwidth API sends this message to the application when the call ends.                                                                                                                        |Not available in Slingshot|
+| [Incoming Call Event](events/incomingCall.md) | Bandwidth API sends this message to the application when an incoming call arrives. For incoming call the callback set is the one related to the Application associated with the called number. ||
+| [Recording event](events/recording.md)        | Bandwidth API sends this event to the application when an the recording media file is saved or an error occurs while saving it.                                                                ||
+| [Redirect event](events/redirect.md)          | Bandwidth API sends this event to the application when a `<Redirect>` is requested                                                                                                             ||
+| [Incoming SMS event](events/incomingSMS.md)   | Bandwidth API sends this event to the application when an SMS is sent to the Bandwidth Number assigned to an application                                                                       |Not supported|
+| [Transfer Complete Event](events/transfer.md) | Bandwidth API sends this event to the application when the `<Transfer>`is complete                                                                                                             | |
+| Conference Events                             | Events during conferencing |TBD|
 
 
 ## Use cases
