@@ -2,6 +2,11 @@
 ## XML: `<Reject>`
 The Reject verb is used to reject incoming calls.
 
+<aside class="alert general small">
+<p>
+This feature is coming soon.
+</p>
+</aside>
 
 
 ### Attributes
