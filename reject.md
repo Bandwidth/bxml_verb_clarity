@@ -7,7 +7,7 @@ The Reject verb is used to reject incoming calls.
 ### Attributes
 | ATTRIBUTE | DESCRIPTION                                                                                                     |
 |:----------|:----------------------------------------------------------------------------------------------------------------|
-| reason    | (optional) Describe the reason for rejecting the call. Allowed values: "BUSY" or "REJECTED". Default: "BUSY"    |
+| reason    | (optional) Describe the reason for rejecting the call (busy or rejected to play different tones to the caller). |
 
 
 ### Events Recevied
