@@ -1,6 +1,7 @@
 
 ## XML: `<SpeakSentence>`
-The SpeakSentence verb is used to convert any text into speak for the caller.
+The SpeakSentence verb is used to convert any text into speech for the caller.
+Note: If `<SpeakSentence>` is the last verb in the BXML, the call shall be disconnected after 30 seconds. Use [Redirect](redirect.md) verb to send the next BXML if the call needs to continue or [Hangup](hangup.md) to hangup the call immediately.
 
 
 ### Attributes
