@@ -6,7 +6,7 @@ The PlayAudio verb is used to play an audio file in the call.
 ### Attributes
 | ATTRIBUTE | Description                                                                                                     |
 |:----------|:----------------------------------------------------------------------------------------------------------------|
-| digits    | (optional) Allows you to play DTMF digits in the call (No default value). <br> **this feature is coming soon**. |
+|None|None|
 
 
 ### Events Recevied
