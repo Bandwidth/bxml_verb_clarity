@@ -1,12 +1,14 @@
 
 ##  Transfer Complete Event – <Transfer> verb
+This event is sent to the callbackUrl of the Leg-A call when the tarnsferred call(B-leg) completes. 
+In a simultaneous ringing scenario, only one call leg-B succeeds and this event corresponds to that successful leg. If none of the calls were answered, transferComplete is not sent. 
 
 ### Properties
 | Property  | Description                                                                                                                                                  |
 |:----------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | eventType | The event type, value is `transferComplete`.                                                                                                                 |
-| from      | The phone number or SIP address that made the call. Phone numbers are in E.164 format (e.g. +15555555555) -or- SIP addresses (e.g. identify@domain.com).     |
-| to        | The phone number or SIP address that received the call. Phone numbers are in E.164 format (e.g. +15555555555) -or- SIP addresses (e.g. identify@domain.com). |
+| from      | The phone number or SIP address used in the From field of the B-leg call. Phone numbers are in E.164 format (e.g. +15555555555) -or- SIP addresses (e.g. identify@domain.com).     |
+| to        | The phone number or SIP address used in the To field of the B-leg call.. Phone numbers are in E.164 format (e.g. +15555555555) -or- SIP addresses (e.g. identify@domain.com). |
 | callState | The call state. Value will be `active`.                                                                                                                      |
 | callId    | The call id associated with the event.                                                                                                                       |
 | callUri   | The full URL of the call resource for this event.                                                                                                            |
