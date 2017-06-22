@@ -2,6 +2,8 @@
 ## XML: `<PlayAudio>`
 The PlayAudio verb is used to play an audio file in the call.
 
+Note: If `<PlayAudio>` is the last verb in the BXML, the call shall be disconnected after 30 seconds. Use [Redirect](redirect.md) verb to send the next BXML if the call needs to continue or [Hangup](hangup.md) to hangup the call immediately. 
+
 
 ### Attributes
 | ATTRIBUTE | Description                                                                                                     |
