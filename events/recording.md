@@ -22,7 +22,6 @@
 	recordingUri=https%3A%2F%2Fapi.catapult.inetwork.com%2Fv1%2Fusers%2F{user-id}%2Frecordings%2F{recording-id}&
 	status=complete&
 	recordingId={recording-id}&
-	state=complete&
 	eventType=recording&
 	endTime=2016-02-20T14%3A29%3A06Z&
 	callId={call-id}
