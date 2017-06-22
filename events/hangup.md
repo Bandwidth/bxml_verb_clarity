@@ -1,5 +1,6 @@
 
 ##  Hangup Event
+This event shall be sent to the callbackUrl if set. 
 
 
 ### Properties
