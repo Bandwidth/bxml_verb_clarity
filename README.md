@@ -20,34 +20,7 @@
 | [Answer Event](events/answer.md)              | Bandwidth API sends this message to the application when the call is answered.                                                                                                                 |
 | [Gather event](events/gather.md)              | Bandwidth API generates a gather event when the gather command completes in a call.                                                                                                            |
 | [Hangup Event](events/hangup.md)              | Bandwidth API sends this message to the application when the call ends.                                                                                                                        |
-| [Incoming Call Event](events/incomingCall.md) | Bandwidth API sends this message to the application when an incoming call arrives. For incoming call the callback set is the one related to the Application associated with the called number. |
-| [Recording event](events/recording.md)        | Bandwidth API sends this event to the application when an the recording media file is saved or an error occurs while saving it.                                                                |
+| [Recording event](events/recording.md)        | Bandwidth API sends this event to the application when the recording media file is saved or an error occurs while saving it.                                                                |
+| [Transcription event](events/transcription.md)        | Bandwidth API sends this event to the application when the recording media file is transcribed if requested. |
 | [Redirect event](events/redirect.md)          | Bandwidth API sends this event to the application when a `<Redirect>` is requested                                                                                                             |
-| [Incoming SMS event](events/incomingSMS.md)   | Bandwidth API sends this event to the application when an SMS is sent to the Bandwidth Number assigned to an application                                                                       |
 | [Transfer Complete Event](events/transfer.md) | Bandwidth API sends this event to the application when the `<Transfer>`is complete                                                                                                             |
-
-
-## Use cases
-
-How would I accomplish these common use cases with BXML
-
-### Scenario 1: Transfer and survey
-Common use case is to have a customer enter an IVR to direct them to a customer service rep.  Once the rep handles the call, they hangup and then send the original caller to an optional survey.
-This requires that the incoming call stays alive after the transfered call completes.
-
-1. Incoming call, reply with [`<Gather>`](gather.md) BXML to direct to correct department
-2. Receive the [Gather](events/gather.md) callback
-    1. The reply may have a BXML for another <Gather> to be able to build the IVR system. 
-3. Reply with [`<Transfer>`](transfer.md) BXML based on customer response.
-4. Customer and rep talk
-5. Rep hangs up. Receive the [transferComplete](events/transfer.md) event
-6. Reply with [`<Gather>`](gather.md) BXML to get feedback
-
-### Scenario 2: Transfer and voicemail
-Common use case is to transfer a call, if the transfer times out send the original caller to voicemail
-
-1. Incoming call, reply [`<Transfer>`](transfer.md) BXML with `callTimeout` set
-2. Receive the [transferComplete](events/transfer.md) event when transfered call doesn't answer
-3. Reply with [`<SpeakSentence>`](speakSentence.md) and [`<Record>`](record.md) BXML to get voicemail
-4. (Customer hangsup? or do we hangup? how do we determine when to end the call after record?)
-5. Receive [Recording](events/recording.md) and [Hangup](events/hangup.md) event.
